@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="An app for project visualization and online collaboration.">
+    <meta name="keywords" content="project-visualization, coderadi, auvora, task-management, online-collaboration, project-management, todo-management">
+    
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/favicon.ico') }}" type="image/x-icon">
+    <title>coderadi &bull; Auvora Vision</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/index.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+</head>
+<body>
+    <span class="glowlight" id="top-glowlight"></span>
+
+    <header class="header row h-sb">
+        <a href="/" class="app-title link row gap-10">
+            <img src="{{ url_for('static', filename='assets/icons/logo.png') }}" alt="App logo" class="logo">
+            <span class="title">vision</span>
+        </a>
+
+        <ul class="list row gap-20">
+            <li><a href="#features" class="link">Features</a></li>
+            <li><a href="#future" class="link">Future</a></li>
+            <li><a href="https://coderadi.in/" class="link">About the developer</a></li>
+        </ul>
+
+        <a href="#login" class="link btn fl fx-glow">Get started</a>
+    </header>
+    <hr class="divider">
+    <main class="main column gap-100">
+        <section class="hero column gap-50 v-center">
+            <div class="text-content column gap-20 v-center">
+                <h1 class="h1">
+                    <p>Visualize your Projects.</p>
+                    <p>Collaborate with Clarity.</p>
+                </h1>
+
+                <p class="para">Empowering entrepreneurs to track progress, build portfolios, and ship faster with precision-engineered project visualization tools.</p>
+
+                <div class="res-row gap-10">
+                    <a href="#login" class="link btn fl fx-glow">Get started</a>
+                    <a href="#explore" class="link btn ot">Explore more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits column gap-50">
+            <div class="head column gap-10 v-center">
+                <h1 class="h1">Why you need vision</h1>
+                <p class="para">Stop juggling scattered files and unclear progress. Centralize your vision and regain control.</p>
+            </div>
+
+            <div class="body grid gap-20">
+                <div class="benefit column gap-10">
+                    <span class="material-symbols-outlined" style="color: #FF4D4D;">crisis_alert</span>
+                    <h1 class="h1">Project Chaos</h1>
+
+                    <p class="para">Overcome the mess of disorganized tasks and lost momentum. Don't let your big ideas get buried in noise.</p>
+                </div>
+                
+                <div class="benefit column gap-10">
+                    <span class="material-symbols-outlined" style="color: #4C8EFF">folder_off</span>
+                    <h1 class="h1">Scattered Files</h1>
+
+                    <p class="para">Bring all your documents, links, and assets into one central hub. Stop searching, start building.</p>
+                </div>
+                
+                <div class="benefit column gap-10">
+                    <span class="material-symbols-outlined" style="color: #808080;">visibility_off</span>
+                    <h1 class="h1">Unclear Progress</h1>
+
+                    <p class="para">Gain instant clarity on your trajectory. Know exactly where you stand and what needs to happen next.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features column gap-50" id="features">
+            <div class="grid gap-50">
+                <div class="text-content column gap-20">
+                    <div class="row gap-10 tag">
+                        <span class="material-symbols-outlined fl-icon">dashboard</span>
+                        <span class="text">Management</span>
+                    </div>
+
+                    <h1 class="h1">Your command center for everything.</h1>
+                    <p class="para">Track tasks, monitor productivity metrics, and visualize progress percentages in real-time. The dashboard is designed to give you the dopamine hit of progress without the clutter.</p>
+
+                    <ul class="list column gap-10">
+                        <li class="row gap-10">
+                            <span class="material-symbols-outlined fl-icon" style="color: #059669;">check_circle</span>
+                            <span class="text">Real-time progress tracking</span>
+                        </li>
+
+                        <li class="row gap-10">
+                            <span class="material-symbols-outlined fl-icon" style="color: #059669;">check_circle</span>
+                            <span class="text">Visual productivity metrics</span>
+                        </li>
+
+                        <li class="row gap-10">
+                            <span class="material-symbols-outlined fl-icon" style="color: #059669;">check_circle</span>
+                            <span class="text">Integrated tasks list</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid gap-50">
+                <div class="text-content column gap-20">
+                    <div class="row gap-10 tag">
+                        <span class="material-symbols-outlined fl-icon">globe</span>
+                        <span class="text">Showcase</span>
+                    </div>
+
+                    <h1 class="h1">Public pages that tell your story.</h1>
+                    <p class="para">Generate beautiful, README-style public pages for your projects instantly. Document your journey, share updates, and build your portfolio in public with zero extra effort.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features2 column gap-50">
+            <h1 class="h1">Built for builders</h1>
+
+            <div class="grid gap-20">
+                <div class="feature column gap-10">
+                    <span class="material-symbols-outlined fl-icon" style="color: #6986DE">grid_view</span>
+                    <h2 class="h2">Organization</h2>
+                    <p class="para">Keep every detail structured and accessible.</p>
+                </div>
+                
+                <div class="feature column gap-10">
+                    <span class="material-symbols-outlined fl-icon" style="color: #FF3D3D">group</span>
+                    <h2 class="h2">Collaboration</h2>
+                    <p class="para">Work seamlessly with your team in real-time.</p>
+                </div>
+                
+                <div class="feature column gap-10">
+                    <span class="material-symbols-outlined fl-icon" style="color: #059669">check_circle</span>
+                    <h2 class="h2">Accountability</h2>
+                    <p class="para">Track milestones and never miss a deadline.</p>
+                </div>
+                
+                <div class="feature column gap-10">
+                    <span class="material-symbols-outlined fl-icon" style="color: #FFFDD0">account_balance_wallet</span>
+                    <h2 class="h2">Portfolio</h2>
+                    <p class="para">Turn your projects into a professional showcase.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="future column gap-50" id="future">
+            <h1 class="h1">The future of Vision</h1>
+
+            <div class="illustration column gap-50">
+                <div class="row gap-20">
+                    <div class="icon-content">
+                        <span class="material-symbols-outlined fl-icon">groups</span>
+                    </div>
+
+                    <div class="text-content column">
+                        <h3 class="h3">Team creation</h3>
+                        <p class="para">Manage multiple contributors per project.</p>
+                    </div>
+                </div>
+                
+                <div class="row gap-20">
+                    <div class="icon-content">
+                        <span class="material-symbols-outlined fl-icon">travel_explore</span>
+                    </div>
+
+                    <div class="text-content column">
+                        <h3 class="h3">Community discovery</h3>
+                        <p class="para">Find and contribute to other open projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="note flex h-center">
+            <div class="note-content column gap-20">
+                <div class="top row h-sb">
+                    <div class="left row gap-10">
+                        <img src="{{ url_for('static', filename='assets/icons/founder.png') }}" alt="Image of the founder" class="logo">
+
+                        <div class="text-content column">
+                            <h3 class="h3">A note from the founder</h3>
+                            <span class="mini">coderadi</span>
+                        </div>
+                    </div>
+
+                    <div class="right"><span class="material-symbols-outlined fl-icon">format_quote</span></div>
+                </div>
+
+                <div class="bottom">
+                    <p class="para"><i>"I built Vision because I was tired of great ideas dying in Google Docs. We needed a place that felt as exciting as the project itself. This is for the builders."</i></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="login column gap-50 v-center" id="login">
+            <div class="login-content column gap-20">
+                <h3 class="h3">Ready to start?</h3>
+
+                <form action="/auth/login" method="post" class="form column gap-10">
+                    <div class="form-elem row gap-10">
+                        <span class="material-symbols-outlined fl-icon">mail</span>
+                        <input type="email" name="email" placeholder="name@company.com" class="input">
+                    </div>
+
+                    <div class="form-elem row gap-10">
+                        <span class="material-symbols-outlined fl-icon">lock</span>
+                        <input type="password" name="password" placeholder="Password" class="input">
+                    </div>
+
+                    <button type="submit" class="btn fl row gap-10 h-center">
+                        <span class="text">Create Account</span>
+                        <span class="material-symbols-outlined">start</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer row h-sb">
+        <a href="/" class="link">
+            <img src="{{ url_for('static', filename='assets/icons/logo.png') }}" alt="App logo" class="logo">
+        </a>
+
+        <p class="para">built by <a href="https://coderadi.in/" class="ulink">coderadi</a></p>
+    </footer>
+
+    <span class="glowlight" id="bottom-glowlight"></span>
+</body>
+</html>

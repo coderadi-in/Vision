@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --background: #0E0E10;
+    --surface: #1A1A1D;
+
+    --primary: #0F52BA;
+    --secondary: #2F7CEE;
+
+    --text: #E8F1F2;
+    --text-secondary: #86868B;
+    --border: #2C2C31;
+
+    --f0: 10px;
+    --f1: 16px;
+    --f2: 24px;
+    --f3: 32px;
+    --f4: min(36px, 10vw);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {display: none;}
+*::selection {background-color: transparent;}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.glowlight {
+    position: fixed;
+    width: max(250px, 20vw);
+    height: max(250px, 20vw);
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(20px);
+}
+
+#top-glowlight {
+    top: 0;
+    left: 0;
+    background: radial-gradient(
+        circle at top left,
+        #226CE0A0 0%,
+        #5863F857 30%,
+        transparent 80%
+    );
+}
+
+#bottom-glowlight {
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(
+        circle at bottom right,
+        #226CE0A0 0%,
+        #5863F857 30%,
+        transparent 80%
+    );
+}
+
+/* -- FLEX -- */
+.flex {display: flex;}
+.fcol {flex-direction: column;}
+
+/* -- ALIGNMENT -- */
+.center {display: flex; align-items: center; justify-content: center;}
+.v-center {align-items: center;}
+.v-en {align-items: end;}
+.h-en {justify-content: end;}
+.h-center {justify-content: center;}
+.h-sb {justify-content: space-between;}
+.h-se {justify-content: space-evenly;}
+
+/* -- GAPPING -- */
+.gap-5 {gap: 5px;}
+.gap-10 {gap: 10px;}
+.gap-20 {gap: 20px;}
+.gap-40 {gap: 40px;}
+.gap-50 {gap: 50px;}
+.gap-100 {gap: 100px;}
+
+/* -- TEXT -- */
+
+.title {
+    font-weight: normal;
+    font-size: var(--f4);
+    font-family: "Inter", sans-serif;
+}
+
+.h1 {
+    font-weight: normal;
+    font-size: var(--f4);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.h2 {
+    font-weight: normal;
+    font-size: var(--f3);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.h3 {
+    font-weight: normal;
+    font-size: var(--f2);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.para, .text {
+    font-weight: normal;
+    font-size: var(--f1);
+    font-family: "Inter", sans-serif;
+}
+
+.mini {
+    font-weight: normal;
+    font-size: var(--f0);
+    font-family: "Inter", sans-serif;
+}
+
+.list {list-style: none;}
+.no-list {list-style-position: inside;}
+
+/* -- LAYOUT -- */
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.res-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {padding: 50px;}
+
+.divider {
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 568px) {
+    .section {padding: 20px;}
+}
+
+/* -- BUTTONS -- */
+
+.btn {
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-ot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border);
+}
+
+.icon-fl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary);
+}
+
+.ot {
+    background-color: transparent;
+    border: 1px solid var(--border);
+}
+
+.fl {
+    background-color: var(--primary);
+    color: var(--text) !important;
+}
+
+.disabled {
+    background-color: var(--border);
+    color: var(--text) !important;
+}
+
+/* -- DYNAMICS -- */
+
+.link {
+    font-weight: normal;
+    font-size: var(--f1);
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.ulink {
+    font-weight: normal;
+    font-size: var(--f1);
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* -- IMAGES -- */
+.img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+.icon {vertical-align: bottom;}
+.fl-icon {font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;}
+
+/* -- INPUTS -- */
+
+label {font-family: "Inter", sans-serif;}
+
+.input {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background-color: transparent;
+    font-family: "Inter", sans-serif;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+textarea.input {
+    resize: vertical;
+    height: 100px;
+}

@@ -1,0 +1,159 @@
+/* | BASE */
+.head {text-align: center;}
+.head .para {width: max(50%, 250px);}
+
+/* | ELEMENT EFFECTS */
+.fx-glow {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 60%);
+}
+
+.fx-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: all 0.5s;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 60%);
+}
+
+.fx-glow:hover::before {filter: blur(8px);}
+
+/* | PAGE SECTIONS */
+.header {padding: 20px;}
+.main {padding: 100px 50px;}
+
+/* | HERO SECTION */
+.main .hero {text-align: center;}
+.main .hero .h1 {font-size: min(5rem, 10vw);}
+.main .hero .para {width: max(50%, 250px);}
+
+/* | BENEFITS SECTION */
+.main .benefits .body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.main .benefits .benefit {
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    background-color: var(--surface);
+}
+
+/* | FEATURES SECTION */
+
+.main .features .tag {
+    padding: 5px 10px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.main .features .grid:first-child .tag {
+    color: #9CC3FF;
+    background-color: var(--primary);
+}
+
+.main .features .grid:last-child .tag {
+    color: #C2DAFF;
+    background-color: var(--secondary);
+}
+
+/* | FEATURES 2 SECTION */
+
+.main .features2 .h1 {text-align: center;}
+.main .features2 .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.main .features2 .grid .feature {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+}
+
+/* | FUTURE SECTION */
+
+.future .illustration {position: relative;}
+.future .illustration .icon-content {
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid var(--secondary);
+    background-color: var(--background);
+}
+.future .illustration .icon-content .fl-icon {color: var(--secondary);}
+
+.future .illustration::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 0px;
+    border: 1.5px dashed var(--secondary);
+    left: 23px;
+}
+
+/* | NOTE SECTION */
+
+.main .note .note-content {
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--surface);
+}
+
+.main .note .note-content .logo {border-radius: 50px;}
+
+/* | LOGIN SECTION */
+
+.main .login .login-content {
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    text-align: center;
+}
+
+.main .login .login-content .form-elem {
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    padding: 10px 15px;
+}
+
+.main .login .login-content .input {
+    padding: 4px;
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+/* | FOOTER */
+
+.footer {
+    padding: 20px;
+    background-color: var(--surface);
+    border-top: 2px solid var(--border);
+}
+
+/* & RESPONSIVENESS */
+
+/* | 768 */
+@media (max-width: 768px) {
+    .header .list {display: none;}
+}
+
+@media (max-width: 568px) {
+    .head .para {width: 100%;}
+    .main {padding: 20px;}
+    .main .hero .para {width: 100%;}
+
+    .note-content,
+    .login-content {width: 100% !important;}
+}
