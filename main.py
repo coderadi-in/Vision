@@ -9,6 +9,7 @@ import os
 # ? IMPORTING ROUTERS
 from router.base import base_router
 from router.auth import auth_router
+import router.socket
 
 # ! ───────────────────────────────┐
 # ! LOADING ENVIRONMENT VARIABLES  │

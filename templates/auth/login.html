@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/favicon.ico') }}" type="image/x-icon">
-    <title>Sign Up &bull; Auvora Vision</title>
+    <title>Log in &bull; Auvora Vision</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/signup.css') }}">
@@ -25,36 +25,24 @@
     <main class="main column gap-20">
         <div class="head column gap-10">
             <h3 class="h3">Vision &bull; coderadi</h3>
-            <h1 class="h1">Create your account</h1>
+            <h1 class="h1">Log in</h1>
             <span class="text">Start visualizing your projects today.</span>
         </div>
         <hr class="divider">
-        <form action="/auth/create-account/" method="post" class="form column gap-10">
-            <div class="form-elem row gap-10">
-                <label for="full-name" class="material-symbols-outlined fl-icon">person</label>
-                <input required type="text" name="full-name" id="full-name" placeholder="Your full name" class="input">
-            </div>
-            
-            <div class="form-elem row gap-10" id="handle-input">
-                <label for="handle" class="material-symbols-outlined fl-icon">alternate_email</label>
-                <input required type="text" name="handle" id="handle" placeholder="Create a handle" class="input">
-                <span class="material-symbols-outlined fl-icon" id="handle-status"></span>
-            </div>
-            <span class="mini" id="handle-status-message"></span>
-            
+        <form action="/auth/login/" method="post" class="form column gap-10">            
             <div class="form-elem row gap-10">
                 <label for="email" class="material-symbols-outlined fl-icon">mail</label>
-                <input required type="email" name="email" id="email" placeholder="name@company.com" class="input" value="{{ data.email }}">
+                <input required type="email" name="email" id="email" placeholder="name@company.com" class="input">
             </div>
             
             <div class="form-elem row gap-10">
                 <label for="password" class="material-symbols-outlined fl-icon">lock</label>
-                <input required type="password" name="password" id="password" placeholder="Password" class="input" value="{{ data.password }}">
+                <input required type="password" name="password" id="password" placeholder="Password" class="input">
             </div>
 
-            <button type="submit" class="btn row h-center gap-10" disabled>
-                <span class="material-symbols-outlined">person_add</span>
-                <span class="text">Create account</span>
+            <button type="submit" class="btn row h-center gap-10">
+                <span class="material-symbols-outlined">login</span>
+                <span class="text">Login</span>
             </button>
         </form>
     </main>
@@ -67,6 +55,5 @@
     <span class="glowlight" id="bottom-glowlight"></span>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='js/auth/signup.js') }}"></script>
 </body>
 </html>

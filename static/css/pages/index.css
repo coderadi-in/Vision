@@ -149,6 +149,7 @@
     .header .list {display: none;}
 }
 
+/* | 568 */
 @media (max-width: 568px) {
     .head .para {width: 100%;}
     .main {padding: 20px;}
@@ -156,4 +157,9 @@
 
     .note-content,
     .login-content {width: 100% !important;}
+}
+
+/* | 425 */
+@media (max-width: 425px) {
+    .header .ulink {display: none;}
 }

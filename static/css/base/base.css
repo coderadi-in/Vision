@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* -- ANIMATIONS -- */
+
+/* | LOAD ANIMATION */
+@keyframes load {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.load {animation: load 2s infinite forwards;}
+
 :root {
     --background: #0E0E10;
     --surface: #1A1A1D;
@@ -27,7 +37,11 @@
 }
 
 *::-webkit-scrollbar {display: none;}
-*::selection {background-color: transparent;}
+
+*::selection {
+    background-color: #27272A;
+    color: #F3F5F6;
+}
 
 body {
     background-color: var(--background);
@@ -162,6 +176,8 @@ body {
 }
 
 /* -- BUTTONS -- */
+
+button:disabled {cursor: not-allowed;}
 
 .btn {
     padding: 10px;
