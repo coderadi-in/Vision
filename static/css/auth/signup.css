@@ -1,0 +1,30 @@
+body {padding: 20px;}
+
+.main {
+    padding: 50px;
+    border-radius: 20px;
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    max-width: 500px;
+    width: 100%;
+}
+
+.form .form-elem {
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 50px;
+}
+
+.form-elem .input {
+    border: none;
+    width: 100%;
+}
+
+.footer {
+    max-width: 500px;
+    width: 100%;
+}
+
+@media (max-width: 568px) {
+    .main {padding: 20px;}
+}

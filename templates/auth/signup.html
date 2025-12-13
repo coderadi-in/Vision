@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/favicon.ico') }}" type="image/x-icon">
+    <title>Sign Up &bull; Auvora Vision</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/signup.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+</head>
+<body class="column h-center v-center gap-20">
+    <header class="header">
+        <div class="app-title row gap-10">
+            <img src="{{ url_for('static', filename='assets/icons/logo.png') }}" alt="Logo" class="logo">
+            <span class="title">Vision</span>
+        </div>
+    </header>
+
+    <main class="main column gap-20">
+        <div class="head column gap-10">
+            <h3 class="h3">Vision &bull; coderadi</h3>
+            <h1 class="h1">Create your account</h1>
+            <span class="text">Start visualizing your projects today.</span>
+        </div>
+        <hr class="divider">
+        <form action="/auth/signup/" method="post" class="form column gap-10">
+            <div class="form-elem row gap-10">
+                <label for="full-name" class="material-symbols-outlined fl-icon">person</label>
+                <input type="text" name="full-name" id="full-name" placeholder="Your full name" class="input">
+            </div>
+            
+            <div class="form-elem row gap-10">
+                <label for="handle" class="material-symbols-outlined fl-icon">alternate_email</label>
+                <input type="text" name="handle" id="handle" placeholder="Create a handle" class="input">
+            </div>
+            
+            <div class="form-elem row gap-10">
+                <label for="email" class="material-symbols-outlined fl-icon">mail</label>
+                <input type="email" name="email" id="email" placeholder="name@company.com" class="input" value="{{ data.email }}">
+            </div>
+            
+            <div class="form-elem row gap-10">
+                <label for="password" class="material-symbols-outlined fl-icon">lock</label>
+                <input type="password" name="password" id="password" placeholder="Password" class="input" value="{{ data.password }}">
+            </div>
+
+            <button type="submit" class="btn row h-center gap-10">
+                <span class="material-symbols-outlined">person_add</span>
+                <span class="text">Create account</span>
+            </button>
+        </form>
+    </main>
+    
+    <footer class="footer row h-sb">
+        <p class="para">Built by <a href="https://coderadi.in" class="ulink">coderadi</a></p>
+        <span class="text">software &bull; web-app</span>
+    </footer>
+</body>
+</html>

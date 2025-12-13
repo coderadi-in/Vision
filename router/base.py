@@ -4,7 +4,7 @@
 from flask import Blueprint, render_template, redirect, url_for, flash, request
 from plugins import *
 
-# ! BUILDING BASE ROUTE
+# ! BUILDING BASE ROUTER
 base_router = Blueprint('base_route', __name__)
 
 # & BASE ROUTE

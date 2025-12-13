@@ -8,6 +8,7 @@ import os
 
 # ? IMPORTING ROUTERS
 from router.base import base_router
+from router.auth import auth_router
 
 # ! ───────────────────────────────┐
 # ! LOADING ENVIRONMENT VARIABLES  │
@@ -30,6 +31,7 @@ with (server.app_context()):
 
 # ! BINDING ROUTERS
 server.register_blueprint(base_router)
+server.register_blueprint(auth_router)
 
 # | USER LOADER
 @plugins.logger.user_loader
